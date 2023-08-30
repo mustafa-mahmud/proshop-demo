@@ -1,5 +1,19 @@
+import { Container } from 'react-bootstrap';
+import { Outlet } from 'react-router-dom';
+import { Header, Footer } from './components';
+
 const App = () => {
-  return <h1>Happy React</h1>;
+  return (
+    <>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <Outlet />
+        </Container>
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default App;
